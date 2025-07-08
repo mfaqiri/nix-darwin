@@ -10,12 +10,10 @@
     settings = {
       vim = {
         navigation = {
-                harpoon = {
-                        enable = true;
-
-                    };
-
-                };
+          harpoon = {
+            enable = true;
+          };
+        };
         binds = {
           cheatsheet.enable = true;
           whichKey.enable = true;
@@ -24,9 +22,9 @@
         git = {
           enable = true;
 
-        gitsigns = {
-          enable = true;
-           codeActions.enable = true;
+          gitsigns = {
+            enable = true;
+            codeActions.enable = true;
           };
 
           vim-fugitive.enable = true;
@@ -60,7 +58,17 @@
         extraPlugins = with pkgs.vimPlugins; {
           aerial = {
             package = aerial-nvim;
-            setup = /*lua*/"require('aerial').setup {}";
+            setup =
+              /*
+              lua
+              */
+              "require('aerial').setup {}";
+          };
+
+          harpoon = {
+            package = harpoon;
+            setup = "require('harpoon').setup {}";
+            after = ["aerial"]; # place harpoon configuration after aerial
           };
 
           vim-godot = {

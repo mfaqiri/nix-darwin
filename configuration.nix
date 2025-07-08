@@ -21,29 +21,35 @@ in {
     docker
     awscli2
     curl
-    python3
   ];
 
   homebrew = {
     enable = true;
 
     brews = [
-        "colima"
         "python"
         "pass"
       "hyperkit"
-      "helm"
       "terraform"
         "pinentry-mac"
     ];
 
     casks = [
     "chromium"
-      "postman"
-      "spotify"
       "obs"
         "librewolf"
+      "colima"
+      "pipx"
+      "pass"
+      "hyperkit"
+      "helm"
+      "terraform"
+      "gnu-sed"
+      "spotify_player"
+      "zoxide"
+      "postgresql"
     ];
+
   };
 
   # Necessary for using flakes on this system.
