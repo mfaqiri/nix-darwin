@@ -27,29 +27,24 @@ in {
     enable = true;
 
     brews = [
-        "python"
-        "pass"
-      "hyperkit"
-      "terraform"
-        "pinentry-mac"
+      "qemu"
+      "k9s"
+      "python@3.12"
+      "pinentry-mac"
+      "spotify_player"
+      "gnu-sed"
+      "pass"
+      "colima"
+      "helm"
+      "pipx"
+      "postgresql"
+      "fzf"
     ];
 
     casks = [
-    "chromium"
-      "obs"
-        "librewolf"
-      "colima"
-      "pipx"
-      "pass"
-      "hyperkit"
-      "helm"
-      "terraform"
-      "gnu-sed"
-      "spotify_player"
-      "zoxide"
-      "postgresql"
+      "chromium"
+      "librewolf"
     ];
-
   };
 
   # Necessary for using flakes on this system.

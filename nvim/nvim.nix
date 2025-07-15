@@ -39,13 +39,13 @@
         vimAlias = true;
 
         autocomplete.nvim-cmp = {
-                    enable = true;
-                    mappings = {
-                        confirm = "<C-y>";
-                        next = "<C-j>";
-                        previous = "<C-k>";
-                    };
-                };
+          enable = true;
+          mappings = {
+            confirm = "<C-y>";
+            next = "<C-j>";
+            previous = "<C-k>";
+          };
+        };
 
         comments.comment-nvim.enable = true;
 
@@ -67,13 +67,21 @@
 
           harpoon = {
             package = harpoon;
-            setup = "require('harpoon').setup {}";
+            setup =
+              /*
+              lua
+              */
+              "require('harpoon').setup {}";
             after = ["aerial"]; # place harpoon configuration after aerial
           };
 
           vim-godot = {
             package = vim-godot;
-            setup = /*lua*/"event = 'VimEnter'";
+            setup =
+              /*
+              lua
+              */
+              "event = 'VimEnter'";
           };
         };
       };
