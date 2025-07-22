@@ -44,6 +44,7 @@ in {
     casks = [
       "chromium"
       "librewolf"
+      "virtualbox"
     ];
   };
 

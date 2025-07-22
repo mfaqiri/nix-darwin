@@ -35,6 +35,7 @@
     languages = {
       enableFormat = true;
       enableTreesitter = true;
+      enableDAP = true;
 
       assembly.enable = true;
 
