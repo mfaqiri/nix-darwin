@@ -1,0 +1,3 @@
+[submodule "nix-nvim"]
+	path = nix-nvim
+	url = git@github-mfaqiri:mfaqiri/nix-nvim.git
