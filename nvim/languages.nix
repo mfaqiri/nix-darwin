@@ -7,29 +7,13 @@
       */
       ''
 
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
+              local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-        lspconfig = require('lspconfig')
+              lspconfig = require('lspconfig')
 
-        lspconfig.gdscript.setup(capabilities)
+              lspconfig.gdscript.setup(capabilities)
 
-        lspconfig.cmake.setup(capabilities)
-
-        vim.keymap.set(
-              "n",
-              "<leader>k",
-              '<cmd>lua require("kubectl").toggle({ tab: boolean })<cr>',
-              { noremap = true, silent = true }
-            )
-
-
-        require('nvim-treesitter').setup {
-
-            auto_install = true,
-            highlight = { enable = true },
-            indent = { enable = false },
-        }
-
+              lspconfig.cmake.setup(capabilities)
       '';
 
     languages = {

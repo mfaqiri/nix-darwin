@@ -65,23 +65,13 @@
               "require('aerial').setup {}";
           };
 
-          harpoon = {
-            package = harpoon;
-            setup =
-              /*
-              lua
-              */
-              "require('harpoon').setup {}";
-            after = ["aerial"]; # place harpoon configuration after aerial
-          };
-
           vim-godot = {
             package = vim-godot;
             setup =
               /*
               lua
               */
-              "event = 'VimEnter'";
+              ''event = "VimEnter"'';
           };
         };
       };
