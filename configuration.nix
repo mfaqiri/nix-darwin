@@ -27,6 +27,7 @@ in {
     enable = true;
 
     brews = [
+      "sqlcmd"
       "qemu"
       "k9s"
       "python@3.12"
