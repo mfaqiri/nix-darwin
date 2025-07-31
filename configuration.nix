@@ -7,7 +7,7 @@
 in {
   imports = [
     ./tmux.nix
-    ./nix-nvim/nvim.nix
+    ./nvim/nvim.nix
   ];
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -40,6 +40,7 @@ in {
       "pipx"
       "postgresql"
       "fzf"
+      "zoxide"
     ];
 
     casks = [
