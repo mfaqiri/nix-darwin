@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.nvf.settings.vim = {
     lsp.enable = true;
     luaConfigRC.myconfig =
@@ -7,13 +7,13 @@
       */
       ''
 
-              local capabilities = vim.lsp.protocol.make_client_capabilities()
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-              lspconfig = require('lspconfig')
+        lspconfig = require('lspconfig')
 
-              lspconfig.gdscript.setup(capabilities)
+        lspconfig.gdscript.setup(capabilities)
 
-              lspconfig.cmake.setup(capabilities)
+        lspconfig.cmake.setup(capabilities)
       '';
 
     languages = {
@@ -30,6 +30,7 @@
       csharp.enable = true;
 
       css.enable = true;
+      css.format.package = pkgs.nodePackages.prettier;
 
       go.enable = true;
 
@@ -59,6 +60,7 @@
       tailwind.enable = true;
 
       ts.enable = true;
+      ts.format.package = pkgs.nodePackages.prettier;
     };
   };
 }

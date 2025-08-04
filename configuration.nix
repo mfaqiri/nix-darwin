@@ -41,6 +41,8 @@ in {
       "postgresql"
       "fzf"
       "zoxide"
+      "msodbcsql18"
+      "mssql-tools"
     ];
 
     casks = [
